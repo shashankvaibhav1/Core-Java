@@ -1,0 +1,106 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------------------------
+ * Write a program to illustrate the concept of OOPS
+ * ====================================================================
+ */
+
+package com.shashank.exercise1;
+
+public class Student {
+	private String name;
+	private int marks1;
+	private int marks2;
+	protected int avg;
+	public int getMarks1() {
+		return marks1;
+	}
+	public void setMarks1(int marks1) {
+		this.marks1 = marks1;
+	}
+	public int getMarks2() {
+		return marks2;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public void setMarks2(int marks2) {
+		this.marks2 = marks2;
+	}
+	public int average(){
+		avg = (marks1 + marks2)/2;
+		return avg;
+	}
+	
+}
+
+//-------------------------------------------------------------------
+
+package com.shashank.exercise1;
+
+import java.util.Scanner;
+
+public class Test2 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		Student s1 = new Student();
+		System.out.println("Enter Student Name:");
+		s1.setName(sc.next());
+		System.out.println("Enter Marks1:");
+		s1.setMarks1(sc.nextInt());
+		System.out.println("Enter Marks2:");
+		s1.setMarks2(sc.nextInt());
+		
+		Student s2 = new Student();
+		System.out.println("Enter Student Name:");
+		s2.setName(sc.next());
+		System.out.println("Enter Marks1:");
+		s2.setMarks1(sc.nextInt());
+		System.out.println("Enter Marks2:");
+		s2.setMarks2(sc.nextInt());
+		
+		System.out.println("Highest Average:");
+		
+//		int avg1 = s1.average();
+//		int avg2 = s2.average();
+		if(s1.avg>s2.avg){
+			System.out.println("Name: "+ s1.getName());
+			System.out.println("Marks1: "+ s1.getMarks1());
+			System.out.println("Marks2: "+ s1.getMarks2());
+		}else{
+			System.out.println("Name: "+ s2.getName());
+			System.out.println("Marks1: "+ s2.getMarks1());
+			System.out.println("Marks2: "+ s2.getMarks2());
+		}
+		
+
+	}
+
+}
+
+
+/*
+ * ==================
+ * Output:
+ * Enter Student Name:
+ * Shashank
+ * Enter Marks1:
+ * 78
+ * Enter Marks2:
+ * 89
+ * Enter Student Name:
+ * Satyam
+ * Enter Marks1:
+ * 78
+ * Enter Marks2:
+ * 80
+ * Highest Average:
+ * Name: Satyam
+ * Marks1: 78
+ * Marks2: 80
+ * -------
+ */

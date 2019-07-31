@@ -1,0 +1,33 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------
+ * Write a program to illustrate the use of operator.
+ * ==================================================
+ */
+public class test4 {
+	public static void main(String[] args) 
+	{
+		int a = 32, x,y;
+		x = a/10;
+		y = a%10;
+		System.out.println(x + " " + y);
+		//------------------------
+		float m = 42.0f, n, p;
+		n = m/10;
+		p = m%10;
+		System.out.println(n + " " + p);
+		//------------------------
+		int i = 5, j = 10, k = 20;
+		System.out.println((j>k) && (j>i));
+		System.out.println((j>k) || (j>i));
+	}
+}
+/*
+ * ==================
+ * Output:
+ * 3 2
+ * 4.2 2.0
+ * false
+ * true
+ * ==================
+*/

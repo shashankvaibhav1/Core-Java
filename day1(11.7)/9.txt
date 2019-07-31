@@ -1,0 +1,118 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------
+ * Write a program to accept Student details and find 
+ * the average of subjects. Display the student details
+ * of who scored highest average.
+ * ==================================================
+ */
+import java.util.*;
+public class test9 {
+	public static void main(String[] args) {
+		short a1,b1,c1,d1;
+		short a2,b2,c2,d2;
+		short a3,b3,c3,d3;
+		String name1, name2, name3;
+		float avg1, avg2, avg3;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter Student1 Details:");
+		System.out.println("Name1:");
+		name1= sc.nextLine();
+		System.out.println("Subject1:");
+		a1= sc.nextShort();
+		System.out.println("Subject2:");
+		b1= sc.nextShort();
+		System.out.println("Subject3:");
+		c1= sc.nextShort();
+		System.out.println("Subject4:");
+		d1= sc.nextShort();
+		System.out.println("Enter Student2 Details:");
+		System.out.println("Name2:");
+		name2= sc.next();
+		System.out.println("Subject1:");
+		a2= sc.nextShort();
+		System.out.println("Subject2:");
+		b2= sc.nextShort();
+		System.out.println("Subject3:");
+		c2= sc.nextShort();
+		System.out.println("Subject4:");
+		d2= sc.nextShort();
+		System.out.println("Enter Student3 Details:");
+		System.out.println("Name3:");
+		name3= sc.next();
+		System.out.println("Subject1:");
+		a3= sc.nextShort();
+		System.out.println("Subject2:");
+		b3= sc.nextShort();
+		System.out.println("Subject3:");
+		c3= sc.nextShort();
+		System.out.println("Subject4:");
+		d3= sc.nextShort();
+		avg1 = (a1+b1+c1+d1)/4;
+		avg2 = (a2+b2+c2+d2)/4;
+		avg3 = (a3+b3+c3+d3)/4;
+		System.out.println("Average of "+name1+" :"+avg1);
+		System.out.println("Average of "+name2+" :"+avg2);
+		System.out.println("Average of "+name3+" :"+avg3);
+		if(avg1>avg2){
+			if(avg1>avg3){
+				System.out.println(name1 +" has scored highest average");
+				System.out.println("Subject1: "+a1+"\tSubject2: "+b1+"\tSubject3: "+c1+"\tSubject4: "+d1);
+			}else{
+				System.out.println(name3 +" has scored highest average");
+				System.out.println("Subject1: "+a3+"\tSubject2: "+b3+"\tSubject3: "+c3+"\tSubject4: "+d3);
+			}
+		}else{
+			if(avg2>avg3){
+				System.out.println(name2 +" has scored highest average");
+				System.out.println("Subject1: "+a2+"\tSubject2: "+b2+"\tSubject3: "+c2+"\tSubject4: "+d2);
+			}else{
+				System.out.println(name3 +" has scored highest average");
+				System.out.println("Subject1: "+a3+"\tSubject2: "+b3+"\tSubject3: "+c3+"\tSubject4: "+d3);
+			}
+		}
+	}
+}
+/*
+ * ==================
+ * Output:
+ * Enter Student1 Details:
+ * Name1:
+ * Shashank
+ * Subject1:
+ * 76
+ * Subject2:
+ * 56
+ * Subject3:
+ * 78
+ * Subject4:
+ * 23
+ * Enter Student2 Details:
+ * Name2:
+ * Satyam
+ * Subject1:
+ * 34
+ * Subject2:
+ * 56
+ * Subject3:
+ * 78
+ * Subject4:
+ * 56
+ * Enter Student3 Details:
+ * Name3:
+ * Sumit
+ * Subject1:
+ * 76
+ * Subject2:
+ * 89
+ * Subject3:
+ * 34
+ * Subject4:
+ * 89
+ * Average of Shashank :58.0
+ * Average of Satyam :56.0
+ * Average of Sumit :72.0
+ * Sumit has scored highest average
+ * Subject1: 76	Subject2: 89	Subject3: 34	Subject4: 89
+ * ==================
+*/

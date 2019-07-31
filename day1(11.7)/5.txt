@@ -1,0 +1,32 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------
+ * Write a program to illustrate the use of if-else condition.
+ * ==================================================
+ */
+import java.util.*;
+public class test5 {
+	public static void main(String[] args) {
+		float marks;
+		Scanner sc = new Scanner(System.in);
+		marks = sc.nextFloat();
+		if(marks >= 75.00){
+			System.out.println(marks+" is First Class Division");
+		}else if(marks >= 60.00){
+			System.out.println(marks+" is First Class");
+		}else if(marks >= 50.00){
+			System.out.println(marks+" is Second Class");
+		}else if(marks >= 35.00){
+			System.out.println(marks+" is Pass Class");
+		}else{
+			System.out.println(marks+" is Fail");
+		}
+	}
+}
+/*
+ * ==================
+ * Output:
+ * 67
+ * 67.0 is First Class
+ * ==================
+*/

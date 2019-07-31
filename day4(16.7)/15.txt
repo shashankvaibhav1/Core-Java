@@ -1,0 +1,28 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------------------------
+ * Write a program to find the factorial of 5
+ * ====================================================================
+ */
+
+package com.shashank.pattern;
+
+public class test9 {
+	public static void main(String[] args) {
+		int a =1;
+		for(int i=5; i>=1;i--){
+			System.out.print(i);
+			if(i!=1)
+				System.out.print("*");
+			a *= i;
+		}
+		System.out.println("="+a);
+	}
+}
+
+/*
+ * ==================
+ * Output:
+ * 5*4*3*2*1=120
+ * -------
+ */

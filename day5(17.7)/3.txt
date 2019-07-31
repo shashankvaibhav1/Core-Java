@@ -1,0 +1,40 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------------------------
+ * Write a program to illustrate the concept of Exceptions
+ * ====================================================================
+ */
+
+package com.shashank.exception;
+
+public class test1 {
+	public static void main(String[] args) {
+		try{
+			int[] a = {23,25,56,55,34};
+			System.out.println(a[4]);
+			int c = 30/0;
+			System.out.println(a[5]);
+			System.out.println(c);
+		}catch(ArrayIndexOutOfBoundsException e){
+			e.printStackTrace();
+			System.out.println("Inside catch block");
+		}catch(ArithmeticException e){
+			e.printStackTrace();
+			System.out.println("Inside catch block");
+		}
+		System.out.println("Outside catch block");
+
+	}
+
+}
+
+/*
+ * ==================
+ * Output:
+ * 34
+ * Inside catch block
+ * Outside catch block
+ * java.lang.ArithmeticException: / by zero
+ * 	at com.shashank.exception.test1.main(test1.java:8)
+ * -------
+ */

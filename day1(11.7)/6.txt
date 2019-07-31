@@ -1,0 +1,45 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------
+ * Write a program to generate the bill amount as per electricity reading.
+ * if bill <= 100 then rate as 1.5
+ * if bill <= 200 then rate as 2.0
+ * if bill <= 250 then rate as 2.5
+ * if bill > 250 then rate as 4
+ * ==================================================
+ */
+import java.util.*;
+public class test6 {
+	public static void main(String[] args) {
+		float ele, am=0.0f;
+		double bill = 0;
+		Scanner sc = new Scanner(System.in);
+		ele = sc.nextFloat();
+		if(ele<=100){
+			bill = ele*(1.5);
+			System.out.println("Total Bill: "+ bill);
+		}
+		if(ele<=200){
+			am = ele-100;
+			bill = 100*1.5 + am*(2.0);
+			System.out.println("Total Bill: "+ bill);
+		}
+		if(ele<=250){
+			am = ele-200;
+			bill = 100*1.5 + 100*2.0 + am*(2.5);
+			System.out.println("Total Bill: "+ bill);
+		}
+		if(ele>250){
+			am = ele-250;
+			bill = 100*1.5 + 100*2.0 + 50*2.5 + am*(4);
+			System.out.println("Total Bill: "+ bill);
+		}
+	}
+}
+/*
+ * ==================
+ * Output:
+ * 234
+ * Total Bill: 435.0
+ * ==================
+*/

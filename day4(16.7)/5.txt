@@ -1,0 +1,48 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------------------------
+ * Write a program to illustrate the concept of encapsulation
+ * ====================================================================
+ */
+
+package com.shashank.encapsulation;
+
+public class Account {
+	private int account_no;
+	private long account_bal;
+	public int getAccount_no() {
+		return account_no;
+	}
+	public void setAccount_no(int account_no) {
+		this.account_no = account_no;
+	}
+	public long getAccount_bal() {
+		return account_bal;
+	}
+	public void setAccount_bal(long account_bal) {
+		this.account_bal = account_bal;
+	}
+	
+}
+
+//-------------------------------------------
+
+package com.shashank.encapsulation;
+
+public class test1 {
+	public static void main(String[] args) {
+		Account acc = new Account();
+		acc.setAccount_no(1234235231);
+		acc.setAccount_bal(831312423213124L);
+		System.out.println("Account No.\t: "+acc.getAccount_no());
+		System.out.println("Account Bal.\t: "+acc.getAccount_bal()+"$");
+	}
+}
+
+/*
+ * ==================
+ * Output:
+ * Account No.	: 1234235231
+ * Account Bal.	: 831312423213124$
+ * -------
+ */

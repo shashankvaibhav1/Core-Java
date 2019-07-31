@@ -1,0 +1,105 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------------------------
+ * Write a program to illustrate the concept of abstract class and use 
+ * inheritance.
+ * ====================================================================
+ */
+
+package com.shashank.emp;
+
+public abstract class employee {
+	int eid;
+	String ename;
+	int rateperunit;
+	employee(int eid, String ename, int rateperunit){
+		this.eid = eid;
+		this.ename = ename;
+		this.rateperunit = rateperunit;
+	}
+	public abstract int cal_emp_salary();
+	public int getEid() {
+		return eid;
+	}
+	public void setEid(int eid) {
+		this.eid = eid;
+	}
+	public String getEname() {
+		return ename;
+	}
+	public void setEname(String ename) {
+		this.ename = ename;
+	}
+	public int getRateperunit() {
+		return rateperunit;
+	}
+	public void setRateperunit(int rateperunit) {
+		this.rateperunit = rateperunit;
+	}
+}
+
+//-----------------------------------------------------------------------
+
+package com.shashank.emp;
+
+public class consultant extends employee{
+	int totalhourworked;
+	consultant(int totalhourworked, int eid, String ename, int rateperunit) {
+		super(eid, ename, rateperunit);
+		this.totalhourworked = totalhourworked;
+	}
+	public int cal_emp_salary(){
+		int sal;
+		sal = totalhourworked*rateperunit;
+		return sal;
+	}
+}
+
+//-----------------------------------------------------------------------
+
+package com.shashank.emp;
+
+public class fte extends employee{
+	int totaldayworked;
+	fte(int totaldayworked, int eid, String ename, int rateperunit) {
+		super(eid, ename, rateperunit);
+		this.totaldayworked = totaldayworked;
+	}
+	public int cal_emp_salary(){
+		int sal;
+		sal = totaldayworked*rateperunit;
+		return sal;
+	}
+}
+
+//-----------------------------------------------------------------------
+
+package com.shashank.emp;
+
+public class test {
+	public static void main(String[] args) {
+		consultant ct = new consultant(30,323594,"Shashank Vaibhav",63434);
+		fte ft = new fte(25,323545,"Satyam Mandal",75856);
+		System.out.println("Name\t: "+ct.getEname());
+		System.out.println("Emp Id\t: "+ct.getEid());
+		System.out.println("Salary\t: $"+ct.cal_emp_salary());
+		System.out.println("--------------");
+		System.out.println("Name\t: "+ft.getEname());
+		System.out.println("Emp Id\t: "+ft.getEid());
+		System.out.println("Salary\t: $"+ft.cal_emp_salary());
+		
+	}
+}
+
+/*
+ * ==================
+ * Output:
+ * Name	: Shashank Vaibhav
+ * Emp Id	: 323594
+ * Salary	: $1903020
+ * --------------
+ * Name	: Satyam Mandal
+ * Emp Id	: 323545
+ * Salary	: $1896400
+ * -------
+ */

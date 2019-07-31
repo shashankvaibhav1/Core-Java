@@ -1,0 +1,40 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------------------------
+ * Write a program to illustrate the concept of access modifier and use 
+ * static keyword.
+ * ====================================================================
+ */
+
+package com.shashank.emp1;
+
+public class employee {
+	static int b=0;
+	int c=0;
+	public employee(){
+		c++;
+		b++;
+	}
+}
+
+//-----------------------------------------------------------------------
+
+package com.shashank.emp1;
+
+public class test1 {
+	public static void main(String[] args) {
+		employee a = new employee();
+		System.out.println(a.b +" "+a.c);
+		employee b = new employee();
+		System.out.println(b.b +" "+b.c);
+	}
+
+}
+
+/*
+ * ==================
+ * Output:
+ * 1 1
+ * 2 1
+ * -------
+ */

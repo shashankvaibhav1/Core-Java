@@ -1,0 +1,60 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------------------------
+ * Write a program to illustrate the concept of Function Overloading
+ * ====================================================================
+ */
+
+package com.shashank.polymorphism;
+
+import java.util.Scanner;
+
+public class FunctionOverloading {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter Numbers");
+		int a = add(sc.nextInt(), sc.nextInt());
+		System.out.println(a);
+		float b = add(sc.nextInt(), sc.nextFloat());
+		System.out.println(b);
+		float c = add(sc.nextFloat(), sc.nextInt());
+		System.out.println(c);
+		float d = add(sc.nextFloat(), sc.nextFloat());
+		System.out.println(d);
+	}
+	public static int add(int x, int y){
+		return x+y;
+	}
+	public static float add(int x, float y){
+		return x+y;
+	}
+	public static float add(float x, int y){
+		return x+y;
+	}
+	public static float add(float x, float y){
+		return x+y;
+	}
+}
+
+
+/*
+ * ==================
+ * Output:
+ * Enter Numbers
+ * 10
+ * 20
+ * 30
+ * 
+ * 10
+ * 10.5
+ * 20.5
+ * 
+ * 10.5
+ * 23
+ * 33.5
+ * 
+ * 23.5
+ * 43.6
+ * 67.1
+ * -------
+ */

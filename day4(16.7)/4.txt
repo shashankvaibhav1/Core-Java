@@ -1,0 +1,60 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------------------------
+ * Write a program to accept the sentence and print each word in next
+ * line and also print it in reverse order.
+ * ====================================================================
+ */
+
+package com.shashank.string;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class test2 {
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the String:");
+		String str = sc.nextLine();
+		int p=0, i=0, c=0;
+		ArrayList ar = new ArrayList();
+		while(p!=-1){
+			p = str.indexOf(' ',i);
+			i = p+1;
+			if(p != -1)
+			{
+				System.out.println(str.substring(c, p));
+				ar.add(str.substring(c, p));
+			}
+			else{
+				System.out.println(str.substring(c, str.length()));
+				ar.add(str.substring(c, str.length()));
+			}
+			c = p+1;
+			//System.out.println(p+" "+i+" "+c);
+		}
+		System.out.println("\nReverse Order:");
+		for(int a=ar.size()-1; a>=0; a--)
+			System.out.println(ar.get(a));
+	}
+}
+
+/*
+ * ==================
+ * Output:
+ * Enter the String:
+ * I am learning Core Java
+ * I
+ * am
+ * learning
+ * Core
+ * Java
+ * 
+ * Reverse Order:
+ * Java
+ * Core
+ * learning
+ * am
+ * I
+ * -------
+ */

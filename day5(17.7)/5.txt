@@ -1,0 +1,75 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------------------------
+ * Write a program to illustrate the concept of operations with Excel 
+ * to accept data from user and store to excel file
+ * ====================================================================
+ */
+
+package com.shashank.testing;
+import java.io.*;
+import org.apache.poi.xssf.usermodel.*;
+public class test2 {
+	public static void main(String[] args) {
+		try{
+			File f = new File("d:\\test1.xlsx");
+			test2 t = new test2();
+			int p=0,e=0,o=0;
+			FileInputStream fs = new FileInputStream(f);
+			XSSFWorkbook wb = new XSSFWorkbook(fs);
+			XSSFSheet sh = wb.getSheet("Sheet1");
+			for(int i=0; i<wb.getSheet("Sheet1").getLastRowNum(); i++){
+				XSSFRow row = sh.getRow(i);
+				XSSFCell cell = row.getCell(0);
+				int a = Integer.parseInt(cell.getRawValue());
+				int val = t.check_num(a);
+				FileOutputStream fp = new FileOutputStream(f);
+				if(val==0){
+					//System.out.println("0");
+					XSSFSheet sh0 = wb.getSheet("prime");
+					XSSFRow row1 = sh0.createRow(p);
+					XSSFCell cell1 = row1.createCell(0);
+					cell1.setCellValue(a);
+					p++;
+				}
+				if(val==1){
+					//System.out.println("1");
+					XSSFSheet sh0 = wb.getSheet("odd");
+					XSSFRow row1 = sh0.createRow(o);
+					XSSFCell cell1 = row1.createCell(0);
+					cell1.setCellValue(a);
+					o++;
+				}
+				if(val==2){
+					//System.out.println("2");
+					XSSFSheet sh0 = wb.getSheet("even");
+					XSSFRow row1 = sh0.createRow(e);
+					XSSFCell cell1 = row1.createCell(0);
+					cell1.setCellValue(a);
+					e++;
+				}
+				wb.write(fp);
+			}	
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+	public int check_num(int num){
+		int count=0;
+		for(int i=2; i<num; i++){
+			if(num%i==0){
+				count++;
+				break;
+			}
+		}
+		if(count==0){
+			return 0;
+		}else{
+			if(num%2!=0){
+				return 1;
+			}else{
+				return 2;
+			}
+		}
+	}
+}

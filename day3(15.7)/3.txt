@@ -1,0 +1,72 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * ------------------------------------------------------
+ * Write a program to illustrate the concept of Inheritance
+ * ======================================================
+ */
+
+package com.shashank.bank;
+
+public class Account {
+	int account_no;
+	float account_bal;
+	float interest;
+	
+	public String get_account_details(){
+		String str = "Account Number\t: "+ account_no+
+					"\nAccount Balance\t: " + account_bal +
+					"\nInterest Rate\t: " + interest+"\n-------";
+		return str;
+	}
+	public float cal_interest(float amt){
+		return amt*interest/100; 
+	}
+}
+
+//-------------------------------
+
+package com.shashank.bank;
+
+public class SBAccount extends Account {
+	public boolean withdraw(float withdraw_amt){
+		if(account_bal - withdraw_amt >=500){
+			account_bal -= withdraw_amt;
+			return true;
+		}
+		return false;
+	}
+	public void deposit(float withdraw_amt){
+		account_bal += withdraw_amt;
+	}
+}
+
+//---------------------------------
+
+package com.shashank.bank;
+
+public class test_account {
+	public static void main(String[] args) {
+		SBAccount acc1 = new SBAccount();
+		acc1.account_no = 2345659;
+		acc1.account_bal = 15000;
+		acc1.interest = 10;
+		acc1.deposit(1000);
+		System.out.println(acc1.get_account_details());
+		acc1.withdraw(500);
+		System.out.println(acc1.get_account_details());
+		
+	}
+}
+
+/*
+ * ==================
+ * Output:
+ * Account Number	: 2345659
+ * Account Balance	: 16000.0
+ * Interest Rate	: 10.0
+ * -------
+ * Account Number	: 2345659
+ * Account Balance	: 15500.0
+ * Interest Rate	: 10.0
+ * -------
+ */

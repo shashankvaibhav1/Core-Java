@@ -1,0 +1,28 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------
+ * Write a program to find the no. of words in a line.
+ * ==================================================
+ */
+public class test3 {
+	public static void main(String[] args) {
+		String s = "I am learning a core Java";
+		int c=1;
+		char ch;
+//		String[] sp = s.split(" ");
+//		System.out.println("No. of words: " + sp.length);
+		for(int i=0; i<s.length(); i++){
+			ch = s.charAt(i);
+			if(ch == ' '){
+				c++;
+			}
+		}
+		System.out.println("No. of words: " + c);
+	}
+}
+/*
+ * ==================
+ * Output:
+ * No. of words: 6
+ * ==================
+*/

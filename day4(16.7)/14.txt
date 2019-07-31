@@ -1,0 +1,45 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------------------------
+ * Write a program to print the below series(prime)
+ * 2 3 12 11 13 36 23 29
+ * ====================================================================
+ */
+
+package com.shashank.pattern;
+
+public class test8 {
+	public static void main(String[] args) {
+		int count =0, sum=0;
+		for(int i=2; i<30; i++){
+			int c=0;
+			for(int j=2; j<i;j++){
+				if(i%j==0){
+					c++;
+					break;
+				}
+			}
+			if(c==0){
+				//System.out.println(i+"\t");
+				count++;
+				if(count%4==3){
+					sum = i;
+				}
+				else if(count%4==0){
+					sum+=i;
+					System.out.print(sum+"\t");
+				}else{
+					System.out.print(i+"\t");
+				}
+				
+			}
+		}
+	}
+}
+
+/*
+ * ==================
+ * Output:
+ *  2	3	12	11	13	36	23	29
+ * -------
+ */

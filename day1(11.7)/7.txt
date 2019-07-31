@@ -1,0 +1,25 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------
+ * Write a program to find the no. is odd or even
+ * ==================================================
+ */
+import java.util.*;
+public class test7 {
+public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int no = sc.nextInt();
+		if(no%2==0){
+			System.out.print("Even");
+		}else{
+			System.out.print("Odd");
+		}
+	}
+}
+/*
+ * ==================
+ * Output:
+ * 45
+ * Odd
+ * ==================
+*/

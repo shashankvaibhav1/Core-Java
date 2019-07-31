@@ -1,0 +1,50 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------------------------
+ * Write a program to illustrate the concept of operations with Excel
+ * ====================================================================
+ */
+
+package com.shashank.testing;
+
+import java.io.*;
+
+import org.apache.poi.xssf.usermodel.*;
+
+public class test1 {
+	public static void main(String[] args) {
+		try{
+			File f = new File("d:\\try.xlsx");
+			FileInputStream fs = new FileInputStream(f);
+			XSSFWorkbook wb = new XSSFWorkbook(fs);
+			XSSFSheet sh = wb.getSheet("Sheet1");
+			XSSFRow row = sh.getRow(0);
+			XSSFCell cell = row.getCell(0);
+			String s = cell.getStringCellValue();
+			System.out.println("Name : "+s +" "+ row.getCell(1));
+			/*for(int i=0; i<2; i++){
+				for(int j=0; j<2; j++){
+					XSSFRow row = sh.getRow(i);
+					System.out.print(row.getCell(j)+" ");
+				}
+				System.out.println();
+			}*/
+			//------------------------>
+			FileOutputStream fp = new FileOutputStream(f);
+			cell.setCellValue("Shashank");
+			//wb.write(fp);
+			
+			XSSFRow row1 = sh.createRow(2);
+			XSSFCell cell1 = row1.createCell(2);
+			cell1.setCellValue("SVS");
+			wb.write(fp);
+			System.out.println("Name : "+ row1.getCell(2));
+			
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+
+	}
+
+}

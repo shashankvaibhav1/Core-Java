@@ -1,0 +1,26 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------------------------
+ * Write a program to draw a pattern
+ * 3	5	8	12	17	23	30	38	47
+ * ====================================================================
+ */
+
+package com.shashank.pattern;
+
+public class test11 {
+	public static void main(String[] args) {
+		int a=2;
+		for(int i=1; i<10; i++){
+			a = a+i;
+			System.out.print(a+"\t");
+		}
+	}
+}
+
+/*
+ * ==================
+ * Output:
+ * 3	5	8	12	17	23	30	38	47
+ * -------
+ */

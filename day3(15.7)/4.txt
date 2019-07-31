@@ -1,0 +1,65 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * ------------------------------------------------------
+ * Write a program to illustrate the concept of Constructor
+ * ======================================================
+ */
+
+package com.shashank.bank;
+
+public class Account1 {
+	int account_no;
+	float account_bal;
+	float interest;
+	Account1(int no){
+		this.account_no = no;
+	}
+	Account1(int no, float bal){
+		this.account_no = no;
+		this.account_bal = bal;
+	}
+	Account1(int no, float bal, float rate){
+		this.account_no = no;
+		this.account_bal = bal;
+		this.interest = rate;
+	}
+	
+	public String get_account_details(){
+		String str = "Account Number\t: "+ account_no+
+					"\nAccount Balance\t: " + account_bal +
+					"\nInterest Rate\t: " + interest+"\n-------";
+		return str;
+	}
+	public float cal_interest(float amt){
+		return amt*interest/100; 
+	}
+}
+
+//-------------------------------
+
+package com.shashank.bank;
+
+public class test_account {
+	public static void main(String[] args) {		
+		Account1 ac = new Account1(2345659);
+		System.out.println(ac.get_account_details());
+		Account1 ac1 = new Account1(2345659, 15000);
+		System.out.println(ac1.get_account_details());
+		Account1 ac2 = new Account1(2345659, 15000, 15);
+		System.out.println(ac2.get_account_details());
+		
+	}
+}
+
+/*
+ * ==================
+ * Output:
+ * Account Number	: 2345659
+ * Account Balance	: 15000.0
+ * Interest Rate	: 0.0
+ * -------
+ * Account Number	: 2345659
+ * Account Balance	: 15000.0
+ * Interest Rate	: 15.0
+ * -------
+ */

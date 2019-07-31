@@ -1,0 +1,37 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------------------------
+ * Write a program to find successive multiplication
+ *  5 * 4	= 20
+ *  6 * 6	= 36
+ *  7 * 8	= 56
+ *  8 * 10	= 80
+ *  9 * 12	= 108
+ * ====================================================================
+ */
+
+package com.shashank.pattern;
+
+public class test5 {
+	public static void main(String[] args) {
+		
+		int a = 5, c = a-1;
+		for(int i=0; i<5; i++){
+			System.out.println(a+" * "+c+"\t= "+a*c);
+			a++;
+			c+=2;
+		}
+
+	}
+}
+
+/*
+ * ==================
+ * Output:
+ *  5 * 4	= 20
+ *  6 * 6	= 36
+ *  7 * 8	= 56
+ *  8 * 10	= 80
+ *  9 * 12	= 108
+ * -------
+ */

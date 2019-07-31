@@ -1,0 +1,27 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * ------------------------------------------------------
+ * Write a program to find the number is divisible by 3 
+ * between 10 to 30.
+ * ======================================================
+ */
+public class test11 {
+	public static void main(String[] args) {
+		int num = 10, sum=0;
+		while(num<30){
+			if(num%3==0){
+				sum += num;
+				System.out.print(num+" ");
+			}
+			num++;
+		}
+		System.out.println("\nSum :"+sum);
+	}
+}
+/*
+ * ==================
+ * Output:
+ * 12 15 18 21 24 27 
+ * Sum :117
+ * ==================
+*/

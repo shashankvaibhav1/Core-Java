@@ -1,0 +1,49 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------------------------
+ * Write a program to illustrate the concept of accessibility
+ * ====================================================================
+ */
+
+package com.shashank.exercise2;
+
+import com.shashank.exercise1.demo1;
+
+public class Child extends demo1 {
+	public static void main(String args[])
+	{
+//		demo1 pobj = new demo1();
+		/*System.out.println(pobj.a);
+		System.out.println(pobj.b);
+		System.out.println(pobj.c);*/
+//		System.out.println(pobj.d);
+	}
+	public void detail(){
+		//demo1 pobj = new demo1();
+//		System.out.println(a);
+//		System.out.println(b);
+		System.out.println(c);
+		System.out.println(d);
+	}
+
+}
+
+//-------------------------------------------------------------------
+
+package com.shashank.exercise2;
+
+public class test1 {
+	public static void main(String[] args) {
+		Child ch = new Child();
+		ch.detail();
+		
+	}
+}
+
+/*
+ * ==================
+ * Output:
+ * 30
+ * 40
+ * -------
+ */

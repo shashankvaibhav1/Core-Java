@@ -1,0 +1,40 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------------------------
+ * Write a program to accept the sentence and character from user and
+ * match no. of times the character is comming in the sentence.
+ * ====================================================================
+ */
+
+package com.shashank.string;
+
+import java.util.Scanner;
+
+public class test1 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the String:");
+		String str = sc.nextLine();
+		int c=-1, i=0, p=0;
+		System.out.println("Enter Character\t: ");
+		String s = sc.next();
+		while(p!=-1){
+			c++;
+			p = str.indexOf(s,i);
+			i = p+1;
+		}
+		System.out.println("No. of Character\t: "+c);
+	}
+}
+
+
+/*
+ * ==================
+ * Output:
+ * Enter the String:
+ * I am learning Core Java
+ * Enter Character	: 
+ * a
+ * No. of Character	: 4
+ * -------
+ */

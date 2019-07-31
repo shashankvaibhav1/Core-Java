@@ -1,0 +1,50 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * ------------------------------------------------------
+ * Write a program to illustrate the use of oops
+ * ======================================================
+ */
+package com.shashank;
+
+public class Test1 {
+	public static void main(String[] args) {
+		Mobile smg = new Mobile();
+		smg.call();
+		smg.msg();
+		smg.color = "Red";
+		smg.brand = "Samsung";
+		smg.length = 21.0f;
+		smg.breadth = 16.0f;
+		smg.display();
+
+	}
+}
+
+//-----------------------------------------
+
+package com.shashank;
+
+public class Mobile {
+	protected String color;
+	float length;
+	float breadth;
+	String brand;
+	public void call(){
+		System.out.println("Mobile is Calling");
+	}
+	public void msg(){
+		System.out.println("Mobile is Messaging");
+	}
+	public void display(){
+		System.out.println("Color:"+color+"\tLength:"+length+"\tBreadth:"+breadth+"\tBrand:"+brand);
+	}
+	
+}
+
+/*
+ * ==================
+ * Output:
+ * Mobile is Calling
+ * Mobile is Messaging
+ * Color:Red	Length:21.0	Breadth:16.0	Brand:Samsung
+ */

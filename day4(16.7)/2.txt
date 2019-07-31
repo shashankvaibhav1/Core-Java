@@ -1,0 +1,61 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------------------------
+ * Write a program to illustrate the concept of Polymorphism
+ * ====================================================================
+ */
+
+package com.shashank.polymorphism;
+
+public class Bank {
+	public float get_roi(){
+		return 0.0f;
+	}
+}
+
+//------------------------------------------------
+
+package com.shashank.polymorphism;
+
+public class Citi extends Bank {
+	public float get_roi(){
+		return 9.0f;
+	}
+}
+
+//-----------------------------------------------
+
+package com.shashank.polymorphism;
+
+public class ICICI extends Bank{
+	public float get_roi(){
+		return 8.5f;
+	}
+}
+
+//-----------------------------------------------
+
+package com.shashank.polymorphism;
+
+public class ConstructorOverriding {
+	public static void main(String[] args) {
+		Bank b;
+		
+		b = new Citi();
+		System.out.println("Citi Bank Interest\t: "+b.get_roi());
+		
+		b = new ICICI();
+		System.out.println("ICICI Bank Interest\t: "+b.get_roi());
+
+	}
+
+}
+
+
+/*
+ * ==================
+ * Output:
+ * Citi Bank Interest	: 9.0
+ * ICICI Bank Interest	: 8.5
+ * -------
+ */

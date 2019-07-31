@@ -1,0 +1,44 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * --------------------------------------------------
+ * Write a program to make a pyramid.
+ * ==================================================
+ */
+public class test2 {
+	public static void main(String[] args) {
+		int a=11;
+		for(int i=1; i<=4; i++){
+			a=a-2;
+			for(int j=4; j>i; j--){
+				System.out.print(" ");
+			}
+			for(int j=0; j<i; j++){
+				System.out.print(a+" ");
+			}
+			System.out.println("");
+		}
+		for(int i=0; i<=3; i++){
+			a=a+2;
+			for(int j=0; j<=i; j++){
+				System.out.print(" ");
+			}
+			for(int j=3; j>i; j--){
+				System.out.print(a+" ");
+			}
+			System.out.println("");
+		}
+	}
+}
+/*
+ * ==================
+ * Output:
+   9 
+  7 7 
+ 5 5 5 
+3 3 3 3 
+ 5 5 5 
+  7 7 
+   9 
+    
+ * ==================
+ */

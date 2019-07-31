@@ -1,0 +1,30 @@
+/* Name : Shashank Vaibhav
+ * Emp Code : 323594
+ * ------------------------------------------------------
+ * Write a program to illustrate the use of switch exceptions
+ * of print when break is not available
+ * ======================================================
+ */
+public class switchDemo {
+	public static void main(String[] args) {
+		int n = 12;
+		switch(n){
+			case 12: System.out.println("12");
+					//break;
+			case 5: System.out.println("5");
+			case 7: System.out.println("7");
+					break;
+			default:
+					System.out.println("Default");
+					break;
+		}
+
+	}
+}
+/*
+ * ==================
+ * Output:
+ * 12
+ * 5
+ * 7
+ */
